@@ -2,10 +2,6 @@ import org.jetbrains.intellij.platform.gradle.extensions.intellijPlatform
 
 rootProject.name = "plumb"
 
-pluginManagement {
-    includeBuild("build-logic")
-}
-
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
     id("org.jetbrains.intellij.platform.settings") version "2.19.0"
@@ -23,10 +19,3 @@ dependencyResolutionManagement {
         }
     }
 }
-
-include(
-    "metrics-model",
-    "metrics-core",
-    "adapter-psi",
-    "idea-plugin",
-)
